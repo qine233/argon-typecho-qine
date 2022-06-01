@@ -6,5 +6,20 @@
  * @link https://www.idkzr.com/
  */
 ?>
-/*这里引入头部文件*/
 <?php $this->need('public/header.php'); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
