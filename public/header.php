@@ -10,7 +10,7 @@
    <script src="<?php $this->options->themeUrl('style/style/jquery.min.js'); ?>"></script>
    <script src="<?php $this->options->themeUrl('style/style/popper.min.js'); ?>"></script>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="renderer" content="webkit" />
 <meta name="format-detection" content="email=no" />
 <meta name="format-detection" content="telephone=no" />
@@ -26,28 +26,29 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-Primary">
     <div class="container">
-        <a class="navbar-brand" href="#">主页</a>
+
+                 <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+
+  <div class="archives-qine"> <ul>
+                                                                      <?php $this->widget('Widget_Metas_Category_List')
+                                                                                 ->parse('<li><a class="navbar-brand" href="{permalink}">{name}</a> </li>'); ?>
+                                                                  </ul>  </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbar-default">
             <div class="navbar-collapse-header">
                 <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="javascript:void(0)">
-                            <img src="../../assets/img/brand/blue.png">
-                        </a>
-                    </div>
+
                     <div class="col-6 collapse-close">
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
+                            <span> </span>
                             <span></span>
                         </button>
                     </div>
                 </div>
             </div>
-
-            <ul class="navbar-nav ml-lg-auto">
+   <ul class="navbar-nav ml-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="#">
                         <i class="ni ni-favourite-28"></i>
@@ -74,6 +75,28 @@
                 </li>
             </ul>
 
+
         </div>
     </div>
 </nav>
+
+<header class="header">
+</header>
+
+<style>
+ .header{
+ background:url(https://s4.ax1x.com/2022/02/18/HTSxPI.jpg);
+ height:80%;
+position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+ };
+</style>
